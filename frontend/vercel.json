@@ -3,6 +3,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://logic-builders-niteen.onrender.com/api/:path*"
+    },
+    {
+      "source": "/((?!api/).*)",
+      "destination": "/index.html"
     }
   ]
 }
