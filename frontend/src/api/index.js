@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  // REPLACE the URL below with your actual deployed Render backend URL
+  baseURL: 'https://kalpathon-backend.onrender.com/api',
 });
 
 // Attach JWT token to every request if available

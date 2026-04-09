@@ -24,6 +24,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/campaigns', campaignRoutes);
 app.use('/api/applications', applicationRoutes);
 
+// Health Check Endpoint
+app.get('/api/health', (req, res) => {
+  res.json({ status: 'ok', message: 'Backend is live', timestamp: new Date() });
+});
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
