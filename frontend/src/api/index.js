@@ -1,9 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  // In production (Vercel), this will use the VITE_API_URL you set in the dashboard.
-  // Locally, it will fallback to your Node server on port 5000.
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  // Using a relative path so that Vercel rewrites (production) and Vite proxy (local) handle the routing.
+  baseURL: '/api',
 });
 
 // Attach JWT token to every request if available
