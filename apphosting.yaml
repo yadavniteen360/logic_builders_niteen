@@ -1,0 +1,15 @@
+# Firebase App Hosting configuration for Monorepo
+# Root directory config
+
+# Service configuration
+experimentalServices:
+  # The frontend React app
+  frontend:
+    entrypoint: frontend
+    routePrefix: /
+    framework: vite
+    
+  # The Node.js Express backend
+  backend:
+    entrypoint: backend
+    routePrefix: /api
